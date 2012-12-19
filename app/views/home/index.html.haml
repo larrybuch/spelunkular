@@ -1,5 +1,5 @@
 %h1 Spelunkular
-=form_tag '/splunk' do
+=form_tag '/splunk', :remote => true do
   = text_field_tag 'url'
   = number_field_tag 'number'
   = submit_tag 'Go!'
