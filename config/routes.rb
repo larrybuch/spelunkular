@@ -1,4 +1,7 @@
 Spelunkular::Application.routes.draw do
+
+  post '/splunk' => 'home#splunk'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
