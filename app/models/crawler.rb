@@ -12,7 +12,7 @@ class Crawler < ActiveRecord::Base
       @site = HTTParty.get(@base_url).to_s
     rescue
     end
-    links = @site.scan(/<a .*?href?.*?['"]([^'"]*)['"].*?>\w*?<\/a>/m).flatten
+    links = @site.scan(/<img .*?src=.*?['":]([^'"}]*)['"].*?>/m).flatten
     links.each do |link|
       if URI.parse(link).relative? == true
         URI.join(@base_url, link)
@@ -20,11 +20,11 @@ class Crawler < ActiveRecord::Base
     end
   end
 
-  def recursion
-    @link_collection.each do |link|
-      unless @link_collection.flatten.include?(link)
-        @link_collection << Crawler.party_mode(link)
-      end
+  # def recursion
+  #   @link_collection.each do |link|
+  #     unless @link_collection.flatten.include?(link)
+  #       @link_collection << Crawler.party_mode(link)
+  #     end
   #
   #     puts @link_collection
   #   end
