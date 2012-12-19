@@ -31,6 +31,10 @@ GEM
     annotate (2.5.0)
       rake
     arel (3.0.2)
+    better_errors (0.2.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.7.0)
+    binding_of_caller (0.6.8)
     builder (3.0.4)
     coderay (1.0.8)
     coffee-rails (3.2.2)
@@ -85,6 +89,8 @@ GEM
       activesupport (= 3.2.9)
       bundler (~> 1.0)
       railties (= 3.2.9)
+    rails-footnotes (3.7.9)
+      rails (>= 3.0.0)
     railties (3.2.9)
       actionpack (= 3.2.9)
       activesupport (= 3.2.9)
@@ -121,6 +127,8 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  better_errors
+  binding_of_caller
   coffee-rails (~> 3.2.1)
   haml
   httparty
@@ -128,5 +136,6 @@ DEPENDENCIES
   pg
   pry-rails
   rails (= 3.2.9)
+  rails-footnotes
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)
