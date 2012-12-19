@@ -5,10 +5,18 @@ gem 'rails', '3.2.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 gem 'haml'
+gem 'jquery-rails'
+gem 'pry-rails'
+gem 'annotate'
+gem 'httparty'
+gem 'rails-footnotes'
 
-
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
