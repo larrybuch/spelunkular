@@ -1,2 +1,7 @@
--form_tag '/' do
-  =text_field_tag
+%h1 Spelunkular
+=form_tag '/create' do
+  = text_field_tag 'quote'
+  = number_field_tag 'number'
+  = submit_tag 'Go!'
+
+.images
